@@ -1,15 +1,17 @@
 package pack.cie;
 
-public class Personal{
-    String usn;
-    String name;
-    int sem;
+public class Personal {
+    public String usn;
+    public String name;
+    public int sem;
 
-    public Personal(String u,String n,int sm){
-        usn=u;
-        name=n;
-        sem=sm;
+    public Personal(String u, String n, int s) {
+        usn = u;
+        name = n;
+        sem = s;
+    }
+
+    public void display() {
+        System.out.println("USN: " + usn + ", Name: " + name + ", Sem: " + sem);
     }
 }
-
-

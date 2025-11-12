@@ -1,21 +1,20 @@
 package pack.see;
 
-import java.util.*;
+import java.util.Scanner;
 import pack.cie.Personal;
 
-public class External extends Personal{
-    public External(String u,String n,int sm, int no){
-        super(u,n,sm);
-        int[][] marksee;
-        marksee=new int[no][5];
-        Scanner sc= new Scanner(System.in);
-        int item;
-        for(int j=0;j<no;j++){
-            for (int i=0; i<5;i++){
-                item=sc.nextInt();
-                marksee[j][i]=item;
+public class External extends Personal {
+    public int[][] seeMarks;
+
+    public External(String u, String n, int s, int nStudents) {
+        super(u, n, s);
+        seeMarks = new int[nStudents][5];
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter SEE marks for " + nStudents + " students (5 subjects each):");
+        for (int i = 0; i < nStudents; i++) {
+            for (int j = 0; j < 5; j++) {
+                seeMarks[i][j] = sc.nextInt();
             }
         }
     }
 }
-
