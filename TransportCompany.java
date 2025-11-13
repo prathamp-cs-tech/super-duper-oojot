@@ -5,7 +5,7 @@ interface Vehicle{
 }
 
 class ElectricVehicle implements Vehicle{
-    int batterylevel=0;
+    int batterylevel=100;
     public void drive(double Distance){
         if (batterylevel - (int)(Distance*0.25)<=0){
             System.out.println("Battery too low to drive");
@@ -23,7 +23,7 @@ class ElectricVehicle implements Vehicle{
 }
 
 class FuelVehicle implements Vehicle{
-    int fuellevel=0;
+    int fuellevel=100;
     public void drive(double Distance){
         if (fuellevel - (int)(Distance*0.10)<=0){
             System.out.println("Fuel too low to drive");
@@ -59,7 +59,7 @@ public class TransportCompany{
             i=sc.nextInt();
             sc.nextLine();
             if(i==1){
-                System.out.println("Enter type of vehicle: ");
+                System.out.println("Enter type of vehicle(Electric/Fuel): ");
                 type=sc.nextLine();
                 if (type.equals("Electric")){
                     v = new ElectricVehicle();
